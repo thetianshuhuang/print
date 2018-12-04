@@ -34,6 +34,24 @@ you can combine attributes
 
 ```
 
+## Custom Exception
+Use the ```RenderedException``` class to provide a more colorful base exception class.
+```
+>>> class YouFuckedUpError(RenderedException):
+...    pass
+...
+>>> raise YouFuckedUpError("You've really fucked it up this time. Yeah you.")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+__main__.YouFuckedUpError: 
+__   __        ___        _          _ _   _      ___                 
+\ \ / /__ _  _| __|  _ __| |_____ __| | | | |_ __| __|_ _ _ _ ___ _ _ 
+ \ V / _ \ || | _| || / _| / / -_) _` | |_| | '_ \ _|| '_| '_/ _ \ '_|
+  |_|\___/\_,_|_| \_,_\__|_\_\___\__,_|\___/| .__/___|_| |_| \___/_|  
+                                            |_|                       
+You've really fucked it up this time. Yeah you.
+```
+
 ## Constants
 All constants are accessible with ```from print import *``` or by by calling ```print.<CONST>```.
 
