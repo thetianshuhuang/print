@@ -13,15 +13,13 @@ python3 setup.py install
 ```
 
 First, ```import *``` from print to get access to all constants. Then, call the print statement. The first argument is the object to print; all other arguments are treated as modifiers. For example:
-```python
+```
 >>> from print import *
 >>> print("You can print normally")
 You can print normally
 >>> print(12345678)
 12345678
 >>> print("or with ASCII art", SM)
-```
-```
                   _ _   _        _   ___  ___ ___ ___            _   
  ___ _ _  __ __ _(_) |_| |_     /_\ / __|/ __|_ _|_ _|  __ _ _ _| |_ 
 / _ \ '_| \ V  V / |  _| ' \   / _ \\__ \ (__ | | | |  / _` | '_|  _|
