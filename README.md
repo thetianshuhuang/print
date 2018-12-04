@@ -1,5 +1,7 @@
 # Print
 
+![Print It!](https://github.com/thetianshuhuang/print/blob/master/print.png)
+
 Overloads Python's ```print``` function to add new and exciting functionality.
 
 ## Dependencies
