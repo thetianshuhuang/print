@@ -1,0 +1,513 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Color",
+				"ColorSpace\t(types.rs)"
+			],
+			[
+				"MAKS",
+				"MASK_OFFSET"
+			],
+			[
+				"lastDigit",
+				"lastDigitTests"
+			],
+			[
+				"hammin",
+				"hammingTestTrivial"
+			],
+			[
+				"Access",
+				"AccessReject"
+			],
+			[
+				"index",
+				"IndexError\tclass"
+			],
+			[
+				"quit_",
+				"quit_on_disconnect"
+			],
+			[
+				"con",
+				"connect_device\tfunction"
+			],
+			[
+				"qui",
+				"QUIT\tinstance"
+			],
+			[
+				"is",
+				"is_capslock\tstatement"
+			],
+			[
+				"instr",
+				"instruction_buffer\tstatement"
+			],
+			[
+				"error",
+				"error_handler\tstatement"
+			],
+			[
+				"buffe",
+				"buffer_manager\tstatement"
+			],
+			[
+				"serial",
+				"serial_device\tstatement"
+			],
+			[
+				"ex",
+				"exit_request\tstatement"
+			],
+			[
+				"comam",
+				"commandHandler"
+			],
+			[
+				"vector",
+				"vector_graphics_window"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "term",
+		"selected_items":
+		[
+			[
+				"term",
+				"Terminal View: Open Bash Terminal"
+			],
+			[
+				"indentation",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"indentato",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"rust",
+				"Set Syntax: Rust"
+			],
+			[
+				"project",
+				"Project: Close"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"sub",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"sublimeLinter: ",
+				"SublimeLinter: Previous Error"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"tem",
+				"BracketHighlighter: Toggle String Bracket Escape Mode"
+			],
+			[
+				"gterm",
+				"Git: Track Remote Branch"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"comment",
+				"Toggle Comment"
+			],
+			[
+				"default",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"load",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"shell",
+				"Set Syntax: Shell Script (Bash)"
+			]
+		],
+		"width": 678.0
+	},
+	"console":
+	{
+		"height": 319.0,
+		"history":
+		[
+			"close",
+			"savce",
+			"SbpCloseCurrentView()",
+			"SbpCloseCurrentView",
+			"folders()",
+			"Region",
+			"view.run_command(\"testtest\")",
+			"view.run_command('example')",
+			"view.run_command('test')",
+			"import test.py",
+			"view.run_command('test')",
+			"view.run_command",
+			"view.methods",
+			"view",
+			"view.runcommand('test')",
+			"view.run_command('test')",
+			"view.run_command('test/')",
+			"view.run_command('example')",
+			"view.run_command('ExampleCommand')",
+			"view.run_command('example')",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/tianshu/projects/tmp.py",
+		"/home/tianshu/projects/r5-2019/tmp.py",
+		"/home/tianshu/projects/r5-2019/drivers/core/robot.py",
+		"/home/tianshu/projects/r5-2019/control/task_manager/tasks.py",
+		"/home/tianshu/projects/r5-2019/control/templates/objects.py",
+		"/home/tianshu/projects/r5-2019/control/task_manager/__init__.py",
+		"/home/tianshu/projects/r5-2019/vision/src/py_rs/image.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/core/mod.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/core/types.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/core/image.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/erode_dilate/erode.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/py_rs/mod.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/core/convert.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/erode_dilate/mod.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/main.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/core.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/erode-dilate/erode.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/erode-dilate/mod.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/core/erode.rs",
+		"/home/tianshu/projects/r5-2019/vision/src/erode-dilate",
+		"/home/tianshu/projects/r5-2019/drivers/core/robotcore.py",
+		"/home/tianshu/Desktop/EE312/project_5/makefile",
+		"/home/tianshu/Desktop/EE312/project_5/String.c",
+		"/home/tianshu/Desktop/EE312/project_5/Proj5Test.c",
+		"/home/tianshu/Desktop/EE312/.gitignore",
+		"/home/tianshu/Desktop/EE312/project_5/String.h",
+		"/home/tianshu/Desktop/EE312/project_4/cipher.c",
+		"/home/tianshu/tmp.c",
+		"/home/tianshu/Desktop/EE312/~",
+		"/home/tianshu/Desktop/EE312/k",
+		"/home/tianshu/tmp.",
+		"/home/tianshu/Desktop/EE312/project_2/Song.c",
+		"/home/tianshu/projects/style/example.py",
+		"/home/tianshu/Desktop/EE312/A1/CodeCamp.c",
+		"/home/tianshu/Desktop/EE312/A1/CodeCampTester.c",
+		"/home/tianshu/Downloads/EE312/.gitignore",
+		"/home/tianshu/Downloads/EE312/A1/TestEngine.h",
+		"/home/tianshu/Downloads/EE312/A1/CodeCamp.c",
+		"/home/tianshu/Downloads/EE312/A1/CodeCampTester.c",
+		"/home/tianshu/Desktop/test.c",
+		"/home/tianshu/diameter/radius/models.py",
+		"/home/tianshu/diameter/radius/server.py",
+		"/home/tianshu/diameter/README.md",
+		"/home/tianshu/diameter/diameter/settings.py",
+		"/home/tianshu/diameter/radius/admin.py",
+		"/home/tianshu/diameter/radius/apps.py",
+		"/home/tianshu/diameter/radius/management/commands/radius.py",
+		"/home/tianshu/diameter/radius/password.py",
+		"/home/tianshu/diameter/radius/management/commands/makesecret.py",
+		"/home/tianshu/diameter/diameter/urls.py",
+		"/home/tianshu/diameter/radius/urls.py",
+		"/home/tianshu/projects/pi.py",
+		"/home/tianshu/projects/cv-inventory/feature/kmeans.py",
+		"/home/tianshu/projects/cv-inventory/feature/feature.py",
+		"/home/tianshu/projects/cv-inventory/feature/kernel_ops.py",
+		"/home/tianshu/projects/cv-inventory/feature/t_color.py",
+		"/home/tianshu/projects/cv-inventory/feature/discrete.py",
+		"/home/tianshu/projects/cv-inventory/feature/cv_feature.py",
+		"/home/tianshu/projects/tracker-synergy/feature/kernel_ops.py",
+		"/home/tianshu/projects/tracker-synergy/feature/test.py",
+		"/home/tianshu/projects/tracker-synergy/feature/feature_tracker.py",
+		"/home/tianshu/projects/tracker-synergy/feature/math.py",
+		"/home/tianshu/projects/sld-project/visualize/views.py",
+		"/home/tianshu/projects/sld-project/visualize/file_ops.py",
+		"/home/tianshu/projects/sld-project/visualize/templates/visualize/graph.html",
+		"/home/tianshu/projects/serial-vis/serial_vis/sv_command.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphics_lib/vector_graphics_window.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/buffer_lib/buffer_manager.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/serial_vis.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/util_lib/sv_settings.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphics_lib/default_vector_graphics.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphics_lib/base_graphics.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphics_lib/command_line.py",
+		"/home/tianshu/projects/serial-vis/todo.txt",
+		"/home/tianshu/projects/serial-vis/serial_vis/buffer_lib/buffer.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/util_lib/settings_template.py",
+		"/home/tianshu/projects/serial-vis/example.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/buffer_lib/buffer_io.py",
+		"/home/tianshu/projects/serial-vis/saved_buffer.svb",
+		"/home/tianshu/projects/serial-vis/.gitignore",
+		"/home/tianshu/projects/serial-vis/serial_vis/util_lib/csv_log.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/util_lib/error_handler.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/util_lib/t_color.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/util_lib/__init__.py",
+		"/home/tianshu/projects/serial-vis.wiki/Program-Architecture.md",
+		"/home/tianshu/projects/serial-vis/README.md",
+		"/home/tianshu/projects/serial-vis/serial_vis/serial_lib/threaded_serial.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/serial_lib/base_device.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/serial_lib/ascii_parser.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/serial_lib/ascii_device.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphics_lib/buffer_manager.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphics_lib/keyboard_keybinds.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/util_lib/queue.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphics_lib/__init__.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphics_lib/buffer.py",
+		"/home/tianshu/projects/serial-vis/lib/arduino/src/serial-command.cpp",
+		"/home/tianshu/projects/serial-vis/serial_vis/serial_lib/__init__.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphics_lib/.../serial-vis/serial_vis",
+		"/home/tianshu/projects/serial-vis/examples/example.py",
+		"/home/tianshu/projects/serial_vis",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphipcs_lib",
+		"/home/tianshu/projects/serial-vis/region-5.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/settings_template.py",
+		"/home/tianshu/projects/serial-vis/lib/arduino/src/serial-vis.cpp",
+		"/home/tianshu/projects/serial-vis/serial_vis/serial_lib/hexutil.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/sv_settings.py",
+		"/home/tianshu/projects/serial-vis/lib/arduino/src/serial-command.h",
+		"/home/tianshu/projects/serial-vis/lib/arduino/src/serial-vis.h",
+		"/home/tianshu/projects/serial-vis/lib/arduino/example.cpp",
+		"/home/tianshu/projects/serial-vis/lib/arduino-bin/example.cpp",
+		"/home/tianshu/projects/serial-vis/r5-plan",
+		"/home/tianshu/projects/sublime-projects/todo.txt",
+		"/home/tianshu/projects/sublime-projects/lib/arduino/example.cpp",
+		"/home/tianshu/projects/sublime-projects/serial_vis/serial_vis.py",
+		"/home/tianshu/projects/serial-vis.wiki/Basic-Architecture.md",
+		"/home/tianshu/projects/serial-vis/serial_vis/csv_log.py",
+		"/home/tianshu/projects/serial-vis/serial_log.csv",
+		"/home/tianshu/projects/serial-vis/serial_vis/error_handler.py",
+		"/home/tianshu/projects/serial-vis/serial_vis/serial_lib/bin_device.py",
+		"/home/tianshu/projects/serial-vis/src",
+		"/home/tianshu/projects/serial-vis/serial_vis/graphics+lib",
+		"/home/tianshu/projects/serial-vis/serial_vis/__init__.py",
+		"/home/tianshu/projects/serial-vis/min-example.py",
+		"/home/tianshu/serial-vis/lib/arduino/example.ino",
+		"/home/tianshu/serial-vis/lib/utility/serialhex.c",
+		"/home/tianshu/serial-vis/lib/arduino/arduino.ino",
+		"/home/tianshu/serial-vis/lib/arduino/testbitshift.c",
+		"/home/tianshu/serial-vis/src/serial_parser.py"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "print.sublime-project",
+	"replace":
+	{
+		"height": 55.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"test.",
+				"ctrl-x-ctrl-f/test.py"
+			],
+			[
+				"goto",
+				"Default/goto_line.py"
+			],
+			[
+				"test.py",
+				"test.py"
+			],
+			[
+				"de",
+				"Default.sublime-keymap"
+			],
+			[
+				"__ini",
+				"lib/__init__.py"
+			],
+			[
+				"sbp_layout",
+				"sbp_layout.py"
+			],
+			[
+				"sbp.su",
+				"sbp.sublime-commands"
+			],
+			[
+				"main.subl",
+				"Main.sublime-menu"
+			],
+			[
+				"main.c",
+				"Main.c"
+			],
+			[
+				"readme",
+				"README"
+			],
+			[
+				"lc3sim.c",
+				"lc3sim.c"
+			],
+			[
+				"lc3.def",
+				"lc3.def"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 625.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/.config/sublime-text-3/Packages/file-explorer/file-explorer.sublime-workspace"
+			]
+		],
+		"width": 475.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 197.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
