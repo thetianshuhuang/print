@@ -3,6 +3,7 @@
 
 
 import shutil
+import os
 from .print import print
 
 
@@ -29,10 +30,13 @@ def drender(style, label=''):
             return hfill(style * 2 + ' ' + label + ' ', style)
 
     elif style[0] == style[-1]:
+        # Windows does line wrapping weird
+        sp_left = '\n' * (len(style) - (2 if os.name == 'nt' else 1))
+        sp_right = '\n' * (len(style) - 1)
         return (
-            hfill('', style[0]) + '\n' * (len(style) - 2) +
+            hfill('', style[0]) + sp_left +
             center(label) +
-            '\n' * (len(style) - 1) + hfill('', style[0]))
+            sp_right + hfill('', style[0]))
 
     else:
         return """Style not recognized. Available styles:
