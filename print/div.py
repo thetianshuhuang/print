@@ -41,7 +41,7 @@ def drender(style, s=''):
     """
 
 
-def div(style, s=''):
+def div(style, *args, s=''):
     """Print a divider in the set style"""
 
-    print(drender(style, s=s))
+    print(drender(style, s=s), *args)
