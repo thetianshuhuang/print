@@ -20,18 +20,18 @@ def center(s):
     return ' ' * ((width - len(s)) // 2) + s
 
 
-def drender(style, s=''):
+def drender(style, label=''):
 
     if len(style) == 1:
-        if s == '':
+        if label == '':
             return hfill('', style)
         else:
-            return hfill(style * 2 + ' ' + s + ' ', style)
+            return hfill(style * 2 + ' ' + label + ' ', style)
 
     elif style[0] == style[-1]:
         return (
             hfill('', style[0]) + '\n' * (len(style) - 2) +
-            center(s) +
+            center(label) +
             '\n' * (len(style) - 1) + hfill('', style[0]))
 
     else:
@@ -41,7 +41,7 @@ def drender(style, s=''):
     """
 
 
-def div(style, *args, s=''):
+def div(style, *args, label=''):
     """Print a divider in the set style"""
 
-    print(drender(style, s=s), *args)
+    print(drender(style, label=label), *args)
