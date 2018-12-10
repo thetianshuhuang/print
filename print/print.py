@@ -77,7 +77,7 @@ def print(s, *args):
 
     # Logging
     if putil.LOG_FILE is not None:
-        with open(putil.LOG_FILE) as log:
+        with open(putil.LOG_FILE, 'a') as log:
             log.write(__pf_render(s, __get_font(args)))
 
 
