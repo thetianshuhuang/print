@@ -1,11 +1,15 @@
 
 from .print import print, render
+from . import putil
 from .constants import *
 from .exception import RenderedException
 
 __all__ = [
     # Functions
     "print", "render",
+
+    # Settings
+    "putil",
 
     # Error
     "RenderedException",

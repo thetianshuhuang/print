@@ -8,7 +8,11 @@ print("ASCII Art", BLUE+BR, BIG)
 """
 
 import sys
+import os
+from . import putil
 
+
+# Try to import pyfiglet
 try:
     import pyfiglet
     def __pf_render(s, f):
@@ -16,6 +20,21 @@ try:
 except ImportError:
     def __pf_render(s, f):
         return s
+    print("PyFiglet not found (Large ASCII word art disabled)")
+
+
+# Check for windows
+if os.name == 'nt':
+    try:
+        import colorama
+    except ImportError:
+        raise Exception(
+            "Must have colorama installed for color translation on windows "
+            "systems")
+    colorama.init(wrap=False)
+    __stream = colorama.AnsiToWin32(sys.stderr).stream
+else:
+    __stream = None
 
 
 def __esc(code):
@@ -23,22 +42,43 @@ def __esc(code):
     return "\u001b[{c}m".format(c=code)
 
 
+def __get_font(args):
+    return next((i for i in args if type(i) == str), None)
+
+
 def render(s, *args):
     """Render text with color and font"""
 
-    font = next((i for i in args if type(i) == str), None)
     mods = "".join([__esc(i) for i in args if type(i) == int])
+    s = mods + __pf_render(s, __get_font(args))
 
-    s = mods + __pf_render(s, font) + __esc(0)
-    if font is None:
-        s += "\n"
+    # Remove trailing newline
+    if s[-1] == '\n':
+        s = s[:-1]
 
-    return s
+    # Add escape
+    return s + __esc(0)
+
+
+# Save print statement
+__print = print
 
 
 def print(s, *args):
     """Print statement overloading"""
-    sys.stdout.write(render(str(s), *args))
+
+    global __stream
+    # Linux
+    if __stream is None:
+        __print(render(str(s), *args))
+    # Windows
+    else:
+        __print(render(str(s), *args), file=__stream)
+
+    # Logging
+    if putil.LOG_FILE is not None:
+        with open(putil.LOG_FILE) as log:
+            log.write(__pf_render(s, __get_font(args)))
 
 
 if __name__ == "__main__":
