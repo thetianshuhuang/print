@@ -9,8 +9,8 @@ print("ASCII Art", BLUE+BR, BIG)
 
 import sys
 import os
+import re
 from . import putil
-
 
 # Try to import pyfiglet
 try:
@@ -64,10 +64,15 @@ def render(s, *args):
 __print = print
 
 
+# Regex to clear ANSI escape characters
+ANSI_ESCAPE = re.compile(r'\x1B\[[0-?]*[ -/]*[@-~]')
+
+
 def print(s, *args):
     """Print statement overloading"""
 
     global __stream
+
     # Linux
     if __stream is None:
         __print(render(str(s), *args))
@@ -77,8 +82,11 @@ def print(s, *args):
 
     # Logging
     if putil.LOG_FILE is not None:
+
         with open(putil.LOG_FILE, 'a') as log:
-            log.write(__pf_render(s, __get_font(args)))
+            global ANSI_ESCAPE
+            log.write(ANSI_ESCAPE.sub('', render(s)) + '\n')
+            log.close()
 
 
 if __name__ == "__main__":
