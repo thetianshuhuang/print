@@ -2,6 +2,7 @@
 from .print import print, render
 from . import putil
 from . import div
+from . import table
 from .constants import *
 from .exception import RenderedException
 
@@ -10,7 +11,7 @@ __all__ = [
     "print", "render",
 
     # Modules
-    "putil", "div",
+    "putil", "div", "table",
 
     # Error
     "RenderedException",
