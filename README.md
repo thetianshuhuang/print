@@ -34,6 +34,37 @@ you can combine attributes
 
 ```
 
+## Logging
+```Print``` comes with built-in logging. Simply write the ```putil.LOG_FILE``` variable with the desired file, and lines will be appended:
+```python
+from print import *
+
+putil.LOG_FILE = 'log.txt'
+print('asdf')         # is appended to log.txt
+print('Test', SLANT)  # is also appended to log.txt as ASCII art
+print('Red', RED)     # ANSI escape sequences not written
+```
+
+## Dividers
+The ```div``` module can be used to create nice looking dividers:
+```python
+from print import *
+
+>>> div.div('-')
+----------------------------------------- # stretches all the way across the terminal
+>>> div.div('*', 'Example')
+** Example ******************************
+>>> div.div('= =', 'Example')
+=========================================
+
+                Example
+
+=========================================
+```
+Patterns include:
+- single character: repeats that character across the screen. If a message is provided, two characters are displayed, followed by a space, the message, a space, then characters occupying the remainder of the screen
+- character repeated, with spaces in between: draws two horizontal lines across the screens with that character; in between the two lines, the label text is drawn at the center. Blank lines equal to the number of spaces are added on top and below the label text.
+
 ## Custom Exception
 Use the ```RenderedException``` class to provide a more colorful base exception class.
 ```
