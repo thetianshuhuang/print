@@ -47,7 +47,7 @@ print('Red', RED)     # ANSI escape sequences not written
 
 ## Dividers
 The ```div``` module can be used to create nice looking dividers:
-```python
+```shell
 from print import *
 
 >>> div.div('-')
