@@ -10,7 +10,7 @@ Overloads Python's ```print``` function to add new and exciting functionality.
 
 ## Usage
 Install with
-```python
+```shell
 python3 setup.py install
 ```
 
@@ -22,11 +22,11 @@ You can print normally
 >>> print(12345678)
 12345678
 >>> print("or with ASCII art", SM)
-                  _ _   _        _   ___  ___ ___ ___            _   
- ___ _ _  __ __ _(_) |_| |_     /_\ / __|/ __|_ _|_ _|  __ _ _ _| |_ 
+                  _ _   _        _   ___  ___ ___ ___            _
+ ___ _ _  __ __ _(_) |_| |_     /_\ / __|/ __|_ _|_ _|  __ _ _ _| |_
 / _ \ '_| \ V  V / |  _| ' \   / _ \\__ \ (__ | | | |  / _` | '_|  _|
 \___/_|    \_/\_/|_|\__|_||_| /_/ \_\___/\___|___|___| \__,_|_|  \__|
-                                                                     
+
 >>> print("you can combine attributes", RED, BLUE+BG, BOLD)
 you can combine attributes
 
@@ -47,9 +47,8 @@ print('Red', RED)     # ANSI escape sequences not written
 
 ## Dividers
 The ```div``` module can be used to create nice looking dividers:
-```python
-from print import *
-
+```
+>>> from print import *
 >>> div.div('-')
 ----------------------------------------- # stretches all the way across the terminal
 >>> div.div('*', 'Example')
@@ -65,6 +64,30 @@ Patterns include:
 - single character: repeats that character across the screen. If a message is provided, two characters are displayed, followed by a space, the message, a space, then characters occupying the remainder of the screen
 - character repeated, with spaces in between: draws two horizontal lines across the screens with that character; in between the two lines, the label text is drawn at the center. Blank lines equal to the number of spaces are added on top and below the label text.
 
+## Tables
+Use the ```table``` module to print out tables. Tables consist of two-dimensional arrays:
+```
+>>> from print import *
+>>> t = [["Entry 1", 0.0001, "Value 1"], ["Entry 2", 12345, "Value 2"]]
+>>> table.table(t)
++-------+------+-------+
+|Entry 1|0.0001|Value 1|
++-------+------+-------+
+|Entry 2|12345 |Value 2|
++-------+------+-------+
+```
+
+```table.render``` and ```render``` can be combined to add formatting:
+
+```
+>>> from print import *
+>>> t = [
+	[render("Entry 1", RED), 0.0001, "Value 1"],
+	[render("Entry 2", GREEN), 12345, "Value 2"]]
+>>> print(table.render(t), BOLD)
+```
+
+
 ## Custom Exception
 Use the ```RenderedException``` class to provide a more colorful base exception class.
 ```
@@ -74,12 +97,12 @@ Use the ```RenderedException``` class to provide a more colorful base exception 
 >>> raise YouFuckedUpError("You've really fucked it up this time. Yeah you.")
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-__main__.YouFuckedUpError: 
-__   __        ___        _          _ _   _      ___                 
-\ \ / /__ _  _| __|  _ __| |_____ __| | | | |_ __| __|_ _ _ _ ___ _ _ 
+__main__.YouFuckedUpError:
+__   __        ___        _          _ _   _      ___
+\ \ / /__ _  _| __|  _ __| |_____ __| | | | |_ __| __|_ _ _ _ ___ _ _
  \ V / _ \ || | _| || / _| / / -_) _` | |_| | '_ \ _|| '_| '_/ _ \ '_|
-  |_|\___/\_,_|_| \_,_\__|_\_\___\__,_|\___/| .__/___|_| |_| \___/_|  
-                                            |_|                       
+  |_|\___/\_,_|_| \_,_\__|_\_\___\__,_|\___/| .__/___|_| |_| \___/_|
+                                            |_|
 You've really fucked it up this time. Yeah you.
 ```
 
