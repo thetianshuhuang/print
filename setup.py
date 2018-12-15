@@ -1,12 +1,12 @@
 
-from distutils.core import setup
+from setuptools import setup
 
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='print',
+    name='p',
     version='1.0',
     packages=['print'],
     license='MIT',
@@ -20,7 +20,7 @@ setup(
     url='https://github.com/thetianshuhuang/print',
     classifiers=[
         'Programming Language :: Python :: 3',
-        'License :: MIT License',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ]
 )
