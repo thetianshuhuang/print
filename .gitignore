@@ -1,3 +1,5 @@
 *__pycache__*
 build/*
 *.sublime*
+printtools.egg-info/*
+dist/*

@@ -8,12 +8,18 @@ Overloads Python's ```print``` function to add new and exciting functionality.
 - Python3 (Python2 does not allow overloading of the print statement)
 - PyFiglet (ASII art, anyone?)
 
-## Usage
+## Installation
 Install with
+```shell
+pip install printtools
+```
+
+For the latest version, clone this repository and use
 ```shell
 python3 setup.py install
 ```
 
+## Usage
 First, ```import *``` from print to get access to all constants. Then, call the print statement. The first argument is the object to print; all other arguments are treated as modifiers. For example:
 ```
 >>> from print import *
