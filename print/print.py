@@ -9,8 +9,6 @@ print("ASCII Art", BLUE+BR, BIG)
 
 import sys
 import os
-import re
-from . import putil
 
 # Try to import pyfiglet
 try:
@@ -53,7 +51,7 @@ def render(s, *args):
     s = mods + __pf_render(s, __get_font(args))
 
     # Remove trailing newline
-    if s[-1] == '\n':
+    if len(s) > 0 and s[-1] == '\n':
         s = s[:-1]
 
     # Add escape
@@ -63,9 +61,20 @@ def render(s, *args):
 # Save print statement
 __print = print
 
+# Log file
+__LOG_FILE = None
 
-# Regex to clear ANSI escape characters
-ANSI_ESCAPE = re.compile(r'\x1B\[[0-?]*[ -/]*[@-~]')
+
+def set_log(filename=None):
+    """Set a log
+
+    Parameters
+    ----------
+    filename : str
+        New filename. If None, then no log file is generated.
+    """
+    global __LOG_FILE
+    __LOG_FILE = filename
 
 
 def print(s, *args):
@@ -81,11 +90,12 @@ def print(s, *args):
         __print(render(str(s), *args), file=__stream)
 
     # Logging
-    if putil.LOG_FILE is not None:
+    global __LOG_FILE
+    if __LOG_FILE is not None:
 
-        with open(putil.LOG_FILE, 'a') as log:
-            global ANSI_ESCAPE
-            log.write(ANSI_ESCAPE.sub('', render(s)) + '\n')
+        with open(__LOG_FILE, 'a') as log:
+            from .putil import clear_fmt
+            log.write(clear_fmt(render(str(s), *args)) + '\n')
             log.close()
 
 
