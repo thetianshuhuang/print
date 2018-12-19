@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='printtools',
-    version='1.0',
+    version='1.1',
     packages=['print'],
     license='MIT',
     author='Tianshu Huang',
