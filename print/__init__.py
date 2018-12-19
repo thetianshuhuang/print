@@ -8,7 +8,7 @@ from .exception import RenderedException
 
 __all__ = [
     # Functions
-    "print", "render",
+    "print", "render", "set_log",
 
     # Modules
     "putil", "div", "table",
