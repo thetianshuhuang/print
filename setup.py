@@ -7,9 +7,10 @@ with open("README.md", "r") as fh:
 
 setup(
     name='printtools',
-    version='1.1.2',
+    version='1.1.3',
     packages=['print'],
     license='MIT',
+    install_requires='pyfiglet',
     author='Tianshu Huang',
     author_email='thetianshuhuang@gmail.com',
     description=(
