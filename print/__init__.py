@@ -1,5 +1,5 @@
 
-from .print import print, render
+from .print import print, render, set_log
 from . import putil
 from . import div
 from . import table
