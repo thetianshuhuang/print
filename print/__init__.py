@@ -3,6 +3,7 @@ from .print import print, render
 from . import putil
 from . import div
 from . import table
+from . import argparse
 from .constants import *
 from .exception import RenderedException
 
@@ -11,7 +12,7 @@ __all__ = [
     "print", "render",
 
     # Modules
-    "putil", "div", "table",
+    "putil", "div", "table", "argparse",
 
     # Error
     "RenderedException",
