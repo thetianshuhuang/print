@@ -1,5 +1,5 @@
 
-from .print import print, render
+from .print import print, render, set_log
 from . import putil
 from . import div
 from . import table
@@ -9,7 +9,7 @@ from .exception import RenderedException
 
 __all__ = [
     # Functions
-    "print", "render",
+    "print", "render", "set_log",
 
     # Modules
     "putil", "div", "table", "argparse",

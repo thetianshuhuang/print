@@ -41,15 +41,17 @@ you can combine attributes
 ```
 
 ## Logging
-```Print``` comes with built-in logging. Simply write the ```putil.LOG_FILE``` variable with the desired file, and lines will be appended:
+```Print``` comes with built-in logging. Use ```set_log``` to set the desired file, and lines will be appended:
 ```python
 from print import *
 
-putil.LOG_FILE = 'log.txt'
+set_log('log.txt')
 print('asdf')         # is appended to log.txt
 print('Test', SLANT)  # is also appended to log.txt as ASCII art
 print('Red', RED)     # ANSI escape sequences not written
 ```
+
+To disable logging, ```set_log``` to None with ```set_log()``` or ```set_log(None)```.
 
 ## Dividers
 The ```div``` module can be used to create nice looking dividers:

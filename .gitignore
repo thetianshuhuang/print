@@ -3,3 +3,4 @@ build/*
 *.sublime*
 printtools.egg-info/*
 dist/*
+pirnt.egg-info/*
