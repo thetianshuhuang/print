@@ -2,7 +2,7 @@
 
 ![Print It!](https://github.com/thetianshuhuang/print/blob/master/print.png)
 
-Overloads Python's ```print``` function to add new and exciting functionality.
+A new ```print``` function to add new and exciting functionality.
 
 ## Dependencies
 - Python3 (Python2 does not allow overloading of the print statement)
@@ -20,38 +20,28 @@ python3 setup.py install
 ```
 
 ## Usage
-First, ```import *``` from print to get access to all constants. Then, call the print statement. The first argument is the object to print; all other arguments are treated as modifiers. For example:
+The first argument is the object to print; all other arguments are treated as modifiers. For example:
 ```
->>> from print import *
->>> print("You can print normally")
+>>> import printtools as pt
+>>> pt.print("You can print normally")
 You can print normally
->>> print(12345678)
+>>> pt.print(12345678)
 12345678
->>> print("or with ASCII art", SM)
+>>> pt.print("or with ASCII art", pt.SM)
                   _ _   _        _   ___  ___ ___ ___            _
  ___ _ _  __ __ _(_) |_| |_     /_\ / __|/ __|_ _|_ _|  __ _ _ _| |_
 / _ \ '_| \ V  V / |  _| ' \   / _ \\__ \ (__ | | | |  / _` | '_|  _|
 \___/_|    \_/\_/|_|\__|_||_| /_/ \_\___/\___|___|___| \__,_|_|  \__|
 
->>> print("you can combine attributes", RED, BLUE+BG, BOLD)
+>>> pt.print("you can combine attributes", pt.RED, pt.BLUE + pt.BG, pt.BOLD)
 you can combine attributes
 
 <this will be bold red on a blue background on supported systems>
 
 ```
 
-## Logging
-```Print``` comes with built-in logging. Use ```set_log``` to set the desired file, and lines will be appended:
-```python
-from print import *
-
-set_log('log.txt')
-print('asdf')         # is appended to log.txt
-print('Test', SLANT)  # is also appended to log.txt as ASCII art
-print('Red', RED)     # ANSI escape sequences not written
-```
-
-To disable logging, ```set_log``` to None with ```set_log()``` or ```set_log(None)```.
+**NOTE**: since all other args are captured as formatting arguments, you cannot print multiple items at once as in
+```print(1, 2, 3)```.
 
 ## Dividers
 The ```div``` module can be used to create nice looking dividers:
@@ -74,9 +64,9 @@ Patterns include:
 ## Tables
 Use the ```table``` module to print out tables. Tables consist of two-dimensional arrays:
 ```
->>> from print import *
+>>> from print import table
 >>> t = [["Entry 1", 0.0001, "Value 1"], ["Entry 2", 12345, "Value 2"]]
->>> table.table(t)
+>>> table(t)
 +-------+------+-------+
 |Entry 1|0.0001|Value 1|
 +-------+------+-------+
@@ -84,21 +74,21 @@ Use the ```table``` module to print out tables. Tables consist of two-dimensiona
 +-------+------+-------+
 ```
 
-```table.render``` and ```render``` can be combined to add formatting:
+```table(render=True)``` and ```render``` can be combined to add formatting:
 
 ```
 >>> from print import *
 >>> t = [
-	[render("Entry 1", RED), 0.0001, "Value 1"],
-	[render("Entry 2", GREEN), 12345, "Value 2"]]
->>> print(table.render(t), BOLD)
+	[pt.render("Entry 1", pt.RED), 0.0001, "Value 1"],
+	[pt.render("Entry 2", pt.GREEN), 12345, "Value 2"]]
+>>> print(pt.table(t, render=True), pt.BOLD)
 ```
 
 
 ## Custom Exception
 Use the ```RenderedException``` class to provide a more colorful base exception class.
 ```
->>> class YouFuckedUpError(RenderedException):
+>>> class YouFuckedUpError(pt.RenderedException):
 ...    pass
 ...
 >>> raise YouFuckedUpError("You've really fucked it up this time. Yeah you.")

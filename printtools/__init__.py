@@ -1,18 +1,17 @@
+"""A new print function that adds new and exciting functionality."""
 
-from .print import print, render, set_log
-from . import putil
-from . import div
-from . import table
-from . import argparse
+from .print import print, render
+from .table import table
+from .putil import clear_fmt, join, span, pad, number
+from .div import hfill, center, div
+
 from .constants import *
 from .exception import RenderedException
 
 __all__ = [
     # Functions
-    "print", "render", "set_log",
-
-    # Modules
-    "putil", "div", "table", "argparse",
+    "print", "render", "table", "div",
+    "clear_fmt", "join", "span", "pad", "number",
 
     # Error
     "RenderedException",

@@ -1,3 +1,4 @@
+"""Text formatting constants."""
 
 # Text Effects
 RESET = 0

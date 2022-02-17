@@ -1,3 +1,4 @@
+"""printtools setup script."""
 
 from setuptools import setup
 
@@ -7,12 +8,12 @@ with open("README.md", "r") as fh:
 
 setup(
     name='printtools',
-    version='1.2',
-    packages=['print'],
+    version='1.3',
+    packages=['printtools'],
     license='MIT',
     install_requires='pyfiglet',
     author='Tianshu Huang',
-    author_email='thetianshuhuang@gmail.com',
+    author_email='tianshu@cmu.edu',
     description=(
         'Collection of print utilities making heavy use of ANSI '
         'escape sequences with PyFiglet integration'),

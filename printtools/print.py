@@ -1,5 +1,4 @@
-
-"""ASCII Large Text and ANSI escape sequence print overloading
+"""ASCII Large Text and ANSI escape sequence print overloading.
 
 Examples
 --------
@@ -36,7 +35,7 @@ else:
 
 
 def __esc(code):
-    """Get ANSI escape string"""
+    """Get ANSI escape string."""
     return "\u001b[{c}m".format(c=code)
 
 
@@ -45,8 +44,7 @@ def __get_font(args):
 
 
 def render(s, *args):
-    """Render text with color and font"""
-
+    """Render text with color and font."""
     mods = "".join([__esc(i) for i in args if type(i) == int])
     s = mods + __pf_render(s, __get_font(args))
 
@@ -61,25 +59,9 @@ def render(s, *args):
 # Save print statement
 __print = print
 
-# Log file
-__LOG_FILE = None
-
-
-def set_log(filename=None):
-    """Set a log
-
-    Parameters
-    ----------
-    filename : str
-        New filename. If None, then no log file is generated.
-    """
-    global __LOG_FILE
-    __LOG_FILE = filename
-
 
 def print(s, *args):
-    """Print statement overloading"""
-
+    """Print function overloading."""
     global __stream
 
     # Linux
@@ -88,17 +70,3 @@ def print(s, *args):
     # Windows
     else:
         __print(render(str(s), *args), file=__stream)
-
-    # Logging
-    global __LOG_FILE
-    if __LOG_FILE is not None:
-
-        with open(__LOG_FILE, 'a') as log:
-            from .putil import clear_fmt
-            log.write(clear_fmt(render(str(s), *args)) + '\n')
-            log.close()
-
-
-if __name__ == "__main__":
-
-    print("print.py", )

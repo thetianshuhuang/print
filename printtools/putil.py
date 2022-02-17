@@ -1,5 +1,4 @@
-
-"""Print Configuration and Various Utilities"""
+"""Print Configuration and Various Utilities."""
 
 import re
 
@@ -10,16 +9,16 @@ from .print import render
 
 
 def clear_fmt(s):
-    """Clear ANSI formatting from a string"""
-
+    """Clear ANSI formatting from a string."""
     return re.sub(r'\x1B\[[0-?]*[ -/]*[@-~]', '', s)
 
 
 def join(*args):
-    """Join multi-line strings line-by-line, and pad with the appropriate
-    number of spaces needed to preserve alignment
-    """
+    """Join multi-line strings line-by-line.
 
+    Will pad with the appropriate number of spaces needed to preserve
+    alignment.
+    """
     # Split
     args = [arg.split('\n') for arg in args]
 
@@ -37,7 +36,7 @@ def join(*args):
 
 
 def span(left, right, *args, width=get_terminal_size().columns, char=' '):
-    """Set up left and right alignment
+    """Set up left and right alignment.
 
     Parameters
     ----------
@@ -55,14 +54,12 @@ def span(left, right, *args, width=get_terminal_size().columns, char=' '):
     char : str
         Character to fill the span with; defaults to ' '
     """
-
     slen = width - len(clear_fmt(left)) - len(clear_fmt(right))
     return left + render(char * slen, *args) + right
 
 
 def pad(string, *args, width=get_terminal_size().columns, char=' '):
-    """Pad a possibly multi-line string to the desired width"""
-
+    """Pad a possibly multi-line string to the desired width."""
     return '\n'.join([
         span(s, '', *args, width=width, char=char)
         for s in string.split('\n')
@@ -72,7 +69,7 @@ def pad(string, *args, width=get_terminal_size().columns, char=' '):
 def number(
         entries, left_args=[], right_args=[], margin=6,
         width=get_terminal_size().columns, height=get_terminal_size().lines):
-    """Render a list with line numbers
+    """Render a list with line numbers.
 
     Parameters
     ----------
@@ -97,7 +94,6 @@ def number(
     str
         Rendered string
     """
-
     ret = ''
     width = width - margin - 1
 
