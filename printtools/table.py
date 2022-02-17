@@ -32,7 +32,7 @@ def __table_standard(t, padding=' ', indent='', hline=True, heading=False):
 
     for i, row in enumerate(t):
         row_contents = [
-            cell + ' ' * (width - len(cell))
+            cell + ' ' * (width - len(clear_fmt(cell)))
             for width, cell in zip(widths, row)]
         tout += indent + "|" + "|".join(row_contents) + "|\n"
         if hline or (heading and i == 1):
@@ -52,7 +52,7 @@ def __table_nosep(t, indent='', spacing='  ', hline=False, heading=False):
 
     for i, row in enumerate(t):
         row_contents = [
-            cell + ' ' * (width - len(cell))
+            cell + ' ' * (width - len(clear_fmt(cell)))
             for width, cell in zip(widths, row)]
         tout += indent + spacing.join(row_contents) + "\n"
         if hline or (heading and i == 0):
